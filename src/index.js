@@ -3,7 +3,7 @@ const fs = require("fs/promises");
 const { execFileSync } = require("child_process");
 const { readSourceFile, getLanguages, loadGlossary } = require("./utils");
 const { translateReadme } = require("./translator");
-const PROVIDERS_REQUIRING_KEY = new Set(["deepl", "openai"]);
+const PROVIDERS_REQUIRING_KEY = new Set(["deepl", "openai", "gemini"]);
 
 /** Run a git command and return trimmed output. */
 function git(args) { return execFileSync("git", args, { encoding: "utf8" }).trim(); }
@@ -26,7 +26,7 @@ async function run() {
     const sourceFile = core.getInput("source-file") || "README.md";
     const dryRun = core.getBooleanInput("dry-run");
     if (!targetLangs.length) throw new Error("At least one target language is required.");
-    if (!["deepl", "openai", "ollama"].includes(provider)) throw new Error(`Unsupported provider: ${provider}`);
+    if (!["deepl", "openai", "gemini", "ollama"].includes(provider)) throw new Error(`Unsupported provider: ${provider}`);
     if (PROVIDERS_REQUIRING_KEY.has(provider) && !apiKey) throw new Error(`api-key is required for ${provider}.`);
     const source = await readSourceFile(sourceFile);
     const glossary = await loadGlossary(core.getInput("glossary-file"));

@@ -1,6 +1,6 @@
 const { protectSpecialBlocks, restoreSpecialBlocks } = require("./markdown");
 const { applyGlossary } = require("./utils");
-const providers = { deepl: require("./providers/deepl"), openai: require("./providers/openai"), ollama: require("./providers/ollama") };
+const providers = { deepl: require("./providers/deepl"), openai: require("./providers/openai"), gemini: require("./providers/gemini"), ollama: require("./providers/ollama") };
 const LANGUAGES = ["ar", "fr", "es", "de", "tr", "ru"];
 const DELAY_MS = 250;
 

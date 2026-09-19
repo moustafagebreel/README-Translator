@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: moustafagebreel/README-Translator@v1
+      - uses: moustafagebreel/README-Translator@v1.0.1
         with:
           target-langs: ar,fr
           api-provider: openai
@@ -36,8 +36,8 @@ jobs:
 | Input | Required | Default | Description |
 | --- | --- | --- | --- |
 | `target-langs` | Yes | `ar` | Comma-separated language codes. |
-| `api-provider` | No | `deepl` | `deepl`, `openai`, or `ollama`. |
-| `api-key` | DeepL/OpenAI | — | Provider credential. |
+| `api-provider` | No | `deepl` | `deepl`, `openai`, `gemini`, or `ollama`. |
+| `api-key` | DeepL/OpenAI/Gemini | — | Provider credential. |
 | `source-file` | No | `README.md` | Source Markdown file. |
 | `commit-message` | No | `docs: update translations [skip ci]` | Generated commit message. |
 | `glossary-file` | No | — | JSON term-to-translation map. |
@@ -66,7 +66,7 @@ Arabic (`ar`), French (`fr`), Spanish (`es`), German (`de`), Turkish (`tr`), and
 | Provider | Best for | Key required | Notes |
 | --- | --- | --- | --- |
 | DeepL | Polished prose | Yes | Retries rate limits up to three times. |
-| OpenAI | Flexible Markdown-aware translation | Yes | Uses `gpt-4o-mini`. |
+| OpenAI | Flexible Markdown-aware translation | Yes | Uses `gpt-4o-mini`. |`r`n| Gemini | Fast, cost-effective translation | Yes | Uses `gemini-2.5-flash`; configurable via `GEMINI_MODEL`. |
 | Ollama | Local/private workflows | No | Defaults to local `llama3.1`. |
 
 ## FAQ
