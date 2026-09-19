@@ -1,0 +1,22 @@
+{
+  "name": "readme-translator",
+  "version": "1.0.0",
+  "description": "A GitHub Action that automatically translates README files.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist",
+    "test": "jest --runInBand"
+  },
+  "keywords": ["github-actions", "readme", "translation"],
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "deepl-node": "^1.16.0",
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3",
+    "jest": "^29.7.0"
+  }
+}

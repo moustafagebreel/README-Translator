@@ -1,0 +1,38 @@
+name: README Translator
+description: Translate README.md to multiple languages automatically
+inputs:
+  target-langs:
+    description: Comma-separated target language codes
+    required: true
+    default: ar
+  api-provider:
+    description: Translation provider: deepl, openai, or ollama
+    required: false
+    default: deepl
+  api-key:
+    description: API key required by DeepL and OpenAI
+    required: false
+  source-file:
+    description: README file to translate
+    required: false
+    default: README.md
+  commit-message:
+    description: Commit message for generated translations
+    required: false
+    default: "docs: update translations [skip ci]"
+  glossary-file:
+    description: Optional path to a JSON glossary
+    required: false
+  dry-run:
+    description: Generate files but do not commit or push
+    required: false
+    default: "false"
+outputs:
+  translated-files:
+    description: Comma-separated generated translation file paths
+runs:
+  using: node20
+  main: dist/index.js
+branding:
+  icon: globe
+  color: blue

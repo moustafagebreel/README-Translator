@@ -1,0 +1,18 @@
+name: Test README translations
+on:
+  push:
+    branches: [main]
+    paths: [README.md]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          target-langs: ar,fr
+          api-provider: openai
+          api-key: ${{ secrets.OPENAI_API_KEY }}
