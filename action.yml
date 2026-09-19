@@ -6,7 +6,7 @@ inputs:
     required: true
     default: ar
   api-provider:
-    description: Translation provider: deepl, openai, gemini, or ollama
+    description: "Translation provider: deepl, openai, gemini, or ollama"
     required: false
     default: deepl
   api-key:
