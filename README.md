@@ -1,6 +1,6 @@
 # README Translator
 
-[![Build](https://github.com/moustafagebreel/README-Translator/actions/workflows/test.yml/badge.svg)](https://github.com/moustafagebreel/README-Translator/actions/workflows/test.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue)](https://github.com/marketplace/actions/readme-translator)
+[![Build](https://github.com/moustafagebreel/README-Translator/actions/workflows/test.yml/badge.svg)](https://github.com/moustafagebreel/README-Translator/actions/workflows/test.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![GitHub Release](https://img.shields.io/github/v/release/moustafagebreel/README-Translator)](https://github.com/moustafagebreel/README-Translator/releases)
 
 Automatically keep multilingual README files in sync whenever your English source changes. README Translator protects code, links, badges, HTML, and comments before translating.
 
