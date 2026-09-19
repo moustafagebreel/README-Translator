@@ -1,6 +1,6 @@
 # README Translator
 
-[![Build](https://github.com/example/readme-translator/actions/workflows/test.yml/badge.svg)](https://github.com/example/readme-translator/actions/workflows/test.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue)](https://github.com/marketplace/actions/readme-translator)
+[![Build](https://github.com/moustafagebreel/README-Translator/actions/workflows/test.yml/badge.svg)](https://github.com/moustafagebreel/README-Translator/actions/workflows/test.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue)](https://github.com/marketplace/actions/readme-translator)
 
 Automatically keep multilingual README files in sync whenever your English source changes. README Translator protects code, links, badges, HTML, and comments before translating.
 
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: your-org/readme-translator@v1
+      - uses: moustafagebreel/README-Translator@v1
         with:
           target-langs: ar,fr
           api-provider: openai
